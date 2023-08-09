@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Outils info - HTML - CSS</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/black.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">    
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>Web</h2>
+                <h1>HTML & CSS</h1>
+                <p>Maulaz Tony</p>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2>Introduction à HTML</h2>
+                </section>
+                <section>
+                    <h2>HTML</h2>
+                    <ul>
+                        <li class="fragment">HyperText Markup Language</li>
+                        <li class="fragment">Langage de balisage</li>
+                        <li class="fragment">Permet de structurer et de mettre en forme des documents</li>
+                        <li class="fragment">Permet de décrire le contenu d'une page web</li>
+                    </ul>
+                </section>
+
+                <section data-markdown style="font-size: 0.75em;">
+                    <textarea data-template>
+						## <i class="fas fa-code"></i> Structure d'un document HTML
+	
+						```html
+						<!DOCTYPE html>
+						<html>
+						<head>
+							<meta charset="UTF-8">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<title>Ma page</title>
+						</head>
+						<body>
+							<h1>Bienvenue à ce cours!</h1> <!-- Titre de la page -->
+						</body>
+						</html>
+						```
+	
+						- `DOCTYPE` information pour le navigateur.
+						- `<html>` balise principale de la page.
+						- `<head>` contiens les metadata.
+						- `<meta charset="utf-8">` encodage de la page.
+						- `<title>` configure le titre de la page.
+						- `<body>` les éléments visibles.
+					</textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2>Les éléments HTML</h2>
+                </section>
+
+                <section>
+                    <h2>Définition</h2>
+                    <ul>
+                        <li class="fragment">Les éléments HTML sont des éléments de la page web</li>
+                        <li class="fragment">Ils sont définis par des balises</li>
+                        <li class="fragment">Ils peuvent avoir des attributs</li>
+                        <li class="fragment">Ils peuvent avoir des enfants</li>
+                    </ul>
+                </section>
+
+                <section data-markdown style="font-size: 0.75em;">
+                    <textarea data-template>
+						## <i class="fas fa-code"></i> Construction d'un élément
+						
+						<img src="images/element-html.png" style="width: 60%">
+
+					</textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.75em;">
+                    <textarea data-template>
+						## <i class="fas fa-code"></i> Les attributs
+						
+						<img src="images/attribut-html.png" style="width: 60%">
+
+						- Les attributs sont des informations supplémentaires sur un élément.
+						- Ils sont définis dans la balise d'ouverture.
+						- Ils sont composés d'un nom et d'une valeur.
+						- Ils sont séparés par un espace.
+
+
+						**Les principaux attributs:**
+
+						- `id` identifiant unique de l'élément.
+						- `class` classe de l'élément.
+						- `style` style CSS de l'élément.
+					</textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Balises de contenu principales
+
+                        En-tête:
+                        ```html
+                        <header></header> <!--entête du document-->
+                        ```
+
+                        Navigation:
+                        ```html
+                        <nav></nav> <!--zone de navigation d’un site-->
+                        ```                        
+
+                        Contenu:
+                        ```html
+                        <main></main> <!--contenu principal-->
+                        ```
+
+                        Pied de page:
+                        ```html 
+                        <footer></footer> <!--pied de page-->
+                        ```
+
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Balises de contenu
+
+                        Article:
+                        ```html
+                        <article></article> <!--contenu indépendant-->
+                        ``` 
+
+                        Section:
+                        ```html
+                        <section></section> <!--Pour regrouper des éléments-->
+                        ```
+
+                        Aparté:
+                        ```html                        
+                        <aside></aside>
+                        <!--Pour regrouper des éléments qui n'ont pas de lien direct 
+                            avec le contenu principal, publicité-->
+                        ```
+
+                        Division:
+                        ```html
+                        <div></div> <!--Pour identifier des éléments par class ou id-->
+                        ```
+
+                        Span:
+                        ```html
+                        <span></span> <!--Identifier des éléments en ligne-->
+                        ```
+
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Eléments textes
+
+                        Titres:
+
+                        ```html
+                        <h1>Titre 1</h1>
+                        <h2>Titre 2</h2>
+                        <h3>Titre 3</h3>
+                        ```
+
+                        Paragraphe:
+
+                        ```html
+                        <p>Paragraphe</p>
+                        ```
+
+                        Saut de ligne:
+
+                        ```html
+                        <br/>
+                        ```
+
+                        Formatage du texte:
+
+                        ```html
+                        <i>italique</i> <b>gras</b> <u>souligné</u>
+                        ```
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Listes
+
+                        Liste non ordonnée:
+
+                        ```html
+                        <ul>
+                            <li>élément 1</li>
+                            <li>élément 2</li>
+                        </ul>
+                        ```
+
+                        Liste ordonnée:
+                        ```html
+                        <ol>
+                            <li>élément 1</li>
+                            <li>élément 2</li>
+                        </ol>
+                        ```
+
+                        Liste de définitions:
+                        ```html
+                        <dl>
+                            <dt>Terme 1</dt>
+                            <dd>Définition 1</dd>
+                            <dt>Terme 2</dt>
+                            <dd>Définition 2</dd>
+                        </dl>
+                        ```
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Tableaux
+
+                        ```html
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Colonne 1</th>
+                                    <th>Colonne 2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ligne 1, Colonne 1</td>
+                                    <td>Ligne 1, Colonne 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Ligne 2, Colonne 1</td>
+                                    <td>Ligne 2, Colonne 2</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Ligne 3, Colonne 1 et 2</td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                        ```
+
+                        L'attribut `colspan` permet de fusionner des cellules.
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Les liens
+
+                        La balise `<a>` permet de créer un lien.
+
+                        ```html
+                        <a target="_blank" title="Google" href="https://www.google.com">Google</a>
+                        ```
+
+                        - `target` permet de définir comment le lien doit être ouvert.
+                        - `title` permet de définir le texte qui s'affiche au survol du lien.
+                        - `href` permet de définir l'adresse du lien.                        
+
+                        *La balise doit contenir l'attribut `href` et un contenu.*
+
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Les images
+
+                        La balise `<img>` permet d'afficher une image.
+
+                        ```html
+                        <img src="images/image.jpg" alt="Image" title="Image">
+                        ```
+
+                        - `src` permet de définir l'adresse de l'image.
+                        - `alt` permet de définir le texte alternatif de l'image.
+                        - `title` permet de définir le texte qui s'affiche au survol de l'image.
+                        - `style="width: 100px;"` permet de définir la largeur de l'image.
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-code"></i> Liste complète des éléments HTML
+                        https://developer.mozilla.org/fr/docs/Web/HTML/Element
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i>Donner du style, le CSS</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+
+                        ## <i class="fas fa-paint-roller"></i> C'est quoi le CSS?
+                        - Cascading Style Sheets
+                        - Permet de mettre en forme les éléments HTML
+                        - Permet de définir le style d'un élément
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les déclarations CSS
+
+                        ```css
+                        h1 {
+                            color: red;
+                            font-size: 20px;
+                        }
+                        ```
+
+                        - `h1` est le sélecteur
+                        - `{}` contient les déclarations
+                        - `color` est la propriété
+                        - `red` est la valeur
+                        - `:` sépare la propriété de la valeur
+                        - `;` sépare les déclarations
+
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> HTML + CSS
+
+                        Ajouter un fichier externe
+
+                        ```html
+                        <!DOCTYPE html>
+                        <html>
+                          <head>
+                            <link rel="stylesheet" type="text/css" href="style.css">
+                          </head>
+                          <body></body>
+                        </html>                        
+                        ```
+
+                        Ajouter du style en ligne
+
+                        ```html
+                        <h1 style="color: rgb(34, 72, 128);">Titre</h1>
+                        <img src="image.jpg" alt="Une belle image" style="width: 200px; height: 150px;">
+                        ```
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Identification d'éléments
+
+                        ```html
+                        <div class="ma_class">
+                            Le texte dans la DIV.
+                            <p class="ma_class">
+                                Dans un paragraphe dans une DIV.
+                                <span id="mon_sapn">
+                                    Bonjour.
+                                </div>
+                            </div>
+                        </div>
+                        ```
+
+                        Il est possible d'identifier les éléments HTML soit :
+                        - par `class`, ce qui permet d'identifier plusieurs composants de famille différente,
+                        - par `id`, ce permet d'identifier un élément unique,
+                        - par `type de balise` (div, p, img, h1, etc.) pour d'identifier un type d'élément.
+
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Les selecteurs</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les différents sélecteurs
+
+                        - Sélecteur de type (tout les paragraphes)
+                        ```css
+                        p { color: red; }
+                        ```   
+                        
+                        - Sélecteur de classe (tout les éléments avec la classe "ma_class")
+                        ```css
+                        .ma_class { color: red; }
+                        ```
+
+                        - Sélecteur d'identifiant (l'élément avec l'id "mon_id")
+                        ```css
+                        #mon_id { color: red; }
+                        ```
+
+                        Il est possible de grouper les sélecteurs en les séparant par une virgule.
+                        ```css
+                        p, .ma_class, #mon_id { color: red; }
+                        ```
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS/Class_selectors
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> La combinaison des sélecteurs
+
+                        - Sélecteur descendant (les éléments p dans les éléments div)
+                        ```css
+                        div p { color: red; }
+                        ```
+                        
+                        - Sélecteur enfant (tous les éléments p dans les éléments div)
+                        ```css
+                        div > p { color: red; }
+                        ```
+
+                        - Sélecteur adjacent (l'élément p qui suit un élément div)
+                        ```css
+                        div + p { color: red; }
+                        ```
+
+                        - Sélecteur type et classe (les éléments p avec la classe "ma_class")
+                        ```css
+                        p.ma_class { color: red; }
+                        ```
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS/Adjacent_sibling_combinator
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les pseudo-classes
+
+                        - Sélecteur de lien non visité
+                        ```css
+                        a:link { color: red; }
+                        ```
+
+                        - Sélecteur de lien visité
+                        ```css
+                        a:visited { color: red; }
+                        ```
+
+                        - Sélecteur de lien au survol
+                        ```css
+                        a:hover { color: red; }
+                        ```
+
+                        - Sélecteur en fonction de la position dans un groupe
+                        ```css
+                        div:first-child { color: red; }
+                        div:nth-child(2n) { color: red; }
+                        ```
+                       
+                        https://developer.mozilla.org/fr/docs/Web/CSS/:hover
+                    </textarea>
+                </section>
+                <section data-markdown style="font-size: 0.75em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-hand-paper"></i> C'est à vous!
+
+                        Tester les sélecteurs CSS sur le site suivant:
+                        
+                        https://flukeout.github.io/
+                        
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Les propriétés</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les propriétés de couleur
+
+                        Donner une couleur par nom (couleurs de base):
+                        ```CSS
+                        p {
+                            color: red;
+                        }
+                        ```
+
+                        Donner une couleur par valeur RGB:
+                        ```CSS
+                        p {
+                            color: rgb(255, 0, 0);
+                        }
+                        ```
+
+                        Donner une couleur par valeur hexadécimale:
+                        ```CSS
+                        p {
+                            color: #ff0000;
+                        }
+                        ```
+                        
+                        https://developer.mozilla.org/fr/docs/Web/CSS/color                        
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les propriétés de textes
+
+                        ```CSS
+                        p {
+                            color: red;
+                            font-size: 20px;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: bold;
+                            text-decoration: underline;
+                            text-align: center;
+                        }
+                        ```
+
+                        Les unités pour la taille du texte sont :
+                        - `px` pour les pixels,
+                        - `pt` pour les points,
+                        - `%` pourcentage de la taille de la police de l'élément parent,
+                        - `em` pour la taille de la police.
+
+                        *`1.5em` correspond à 1.5 fois la taille de la police de l'élément parent.*
+                        
+                        https://developer.mozilla.org/fr/docs/Web/CSS/text-align                        
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> La mise en page</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> La propriétés display
+
+                        La propriété `display` permet de définir le type d'affichage d'un élément.
+                        Les différents types d'affichage sont :
+                        - `block` l'élément est affiché en tant que bloc avec une hauteur et largeur (div, p, h1, etc.),
+                        - `inline` l'élément est affiché en tant qu'élément en ligne avec une largeur (span, img, etc.),
+                        - `inline-block` l'élément est affiché en tant qu'élément en ligne avec une largeur et une hauteur,
+                        - `none` l'élément n'est pas affiché,
+                        - `flex` l'élément est affiché en tant qu'élément flexible.
+                        
+                        https://developer.mozilla.org/fr/docs/Web/CSS/text-align                        
+                    </textarea>
+                </section>
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Les boites</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les boites
+
+                        Les éléments placés avec la propriété `display: block` sont des boites.
+
+                        Elles ont les propriétés suivantes :
+                        - `width` largeur de la boite,
+                        - `height` hauteur de la boite,
+                        - `margin` marge autour de la boite,
+                        - `padding` espace entre le contenu et la bordure de la boite,
+                        - `border` bordure de la boite,
+                        - `background-color` couleur de fond de la boite.
+
+                        ```CSS
+                        div {
+                            width: 200px;
+                            height: 100px;
+                            margin: 10px;
+                            padding: 10px;
+                            border: 1px solid black;
+                            background-color: rgb(255, 0, 0);
+                        }
+                        ```
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> La taille des boites
+
+                        La taille des boites est définie par les propriétés `width` et `height`.
+
+                        ```CSS
+                        div {
+                            width: 200px;
+                            height: 100px;
+                        }
+                        ```
+
+                        Il est possible d'utiliser les unités suivantes :
+                        - `px` pour les pixels,
+                        - `%` pourcentage de la taille de l'élément parent.
+
+                        Il est possible de définir une taille min et max :
+                        ```CSS
+                        div {
+                            min-width: 200px;
+                            max-width: 400px;
+                            min-height: 100px;
+                            max-height: 200px;
+                        }
+                        ```
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Le détail de la taille
+
+                        La taille d'une boite définit la taille du contenu et non la taille de la boite.
+
+                        <img src="images/box-size.png" style="width: 30%">
+
+                        Il est possible de définir la taille exterieur en ajoutant la propriété `box-sizing: border-box`:
+                        ```CSS
+                        div {
+                            width: 200px;
+                            height: 100px;
+                            box-sizing: border-box;
+                        }
+                        ```
+                        
+                    </textarea>
+                </section>         
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> La propriétés position
+
+                        La propriété `position` permet de définir la position d'un élément.
+                        
+                        Les différents types de position sont :
+                        - `static` l'élément est affiché selon le flux normal du document,
+                        - `relative` l'élément est affiché selon le flux normal du document mais peut être déplacé,
+                        - `absolute` l'élément est affiché selon le flux normal du document mais peut être déplacé par rapport à son premier parent non `static`,
+                        - `fixed` l'élément est affiché selon le flux normal du document mais peut être déplacé par rapport à la fenêtre,                        
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Calculs
+
+                        Il est possible de faire des calculs avec les propriétés CSS.
+
+                        ```CSS
+                        div {
+                            width: calc(100% - 20px);
+                            height: calc(100% - 20px);
+                        }
+                        ```
+                    </textarea>
+                </section>                                
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Les flex</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les flex
+
+                        Les éléments placés avec la propriété `display: flex` sont des flex, ils proposent un système de mise en
+                        page flexible et dynamique.
+
+                        <img src="images/flex-axis.png" style="width: 35%">
+
+                        <i class="fas fa-circle-right"></i> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+                        
+                        https://developer.mozilla.org/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox                        
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Le container flex
+                        
+                        Les propriétés suivantes sont à définir sur le container flex :
+
+                        - `flex-direction` direction des éléments,
+                        - `flex-wrap` permet de définir si les éléments peuvent être sur plusieurs lignes,
+                        - `justify-content` permet de gèrer la répartition des éléments sur l'axe principal,
+                        - `align-items` permet de définir l'alignement des éléments sur l'axe secondaire,
+                        - `align-content` permet de définir la répartition des lignes sur l'axe secondaire.
+                        - `gap` permet de définir l'espace entre les éléments.
+
+                        <i class="fas fa-circle-right"></i> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Le container flex
+                        
+                        Les propriétés suivantes sont à définir sur les composants du container flex :
+                        - `flex-grow` permet de définir la capacité d'agrandissement d'un élément,
+                        - `flex-shrink` permet de définir la capacité de réduction d'un élément,
+                        - `flex-basis` permet de définir la taille de base d'un élément ([img](https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg)),
+                        - `flex` permet de définir les trois propriétés précédentes en une seule fois,
+                        - `order` permet de définir l'ordre d'affichage des éléments (donne une priorité d'affichage)),
+                        - `align-self` permet de définir l'alignement d'un élément sur l'axe secondaire.
+
+                        <i class="fas fa-circle-right"></i> https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.75em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-hand-paper"></i> C'est à vous!
+
+                        Tester les flex sur le site suivant:
+                                                
+                        https://codepen.io/tony-maulaz/pen/zYMXeLR
+                        
+                    </textarea>
+                </section>                        
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Les grilles</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les grilles
+
+                        Les grilles offre un mécanisme bidimensionnel pour placer des éléments dans une page.
+
+                        <img src="images/grid-css.png" style="width: 35%">
+
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Les dimensions d'une grille
+
+                        Les propriétés suivantes sont à définir sur le container de la grille :
+
+                        - `display: grid` permet de définir le type d'affichage,
+                        - `grid-template-columns` permet de définir le nombre et la taille des colonnes,
+                        - `grid-template-rows` permet de définir le nombre et la taille des lignes,
+                        - `gap` permet de définir l'espace entre les éléments.
+
+                        ```CSS
+                        #page {
+                            display: grid;
+                            gap: 10px;
+                            grid-template-columns: 150px 3fr 1fr;
+                            grid-template-rows: 100px 1fr 100px;
+                        }
+                        ```
+
+                        Les unités pour la taille des colonnes et des lignes sont :
+                        - `px` pour les pixels,
+                        - `%` pourcentage de la taille de l'élément parent,
+                        - `fr` fraction de l'espace disponible.
+                    </textarea>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Le positionnement des éléments
+
+                        Les propriétés suivantes sont à définir sur les composants à l'intérieur de la grille :
+                        - `grid-column` permet de définir la position de l'élément sur les colonnes,
+                        - `grid-row` permet de définir la position de l'élément sur les lignes,
+
+                        ```CSS
+                        #footer {
+                            grid-column: 1 / 4;
+                            grid-row: 3 / 3;
+                        }
+                        ```                        
+
+                        `1/4`: signifie que l'élément commence à la colonne 1 et se termine à la colonne 4.
+
+                        `3/3`: signifie que l'élément commence à la ligne 3 et se termine à la ligne 3.
+
+                        https://developer.mozilla.org/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+                    </textarea>
+                </section>                        
+
+            </section>
+
+            <section>
+                <section class="slide_title" data-background-color="rgb(35,70,128)">
+                    <h2><i class="fas fa-paint-roller"></i> Media Queries</h2>
+                </section>
+
+                <section data-markdown style="font-size: 0.6em;">
+                    <textarea data-template>
+                        ## <i class="fas fa-paint-roller"></i> Media Queries
+
+                        Les media queries sont un outil puissant en CSS qui permet d'appliquer 
+                        des styles basés sur certaines conditions, généralement liées aux caractéristiques de l'appareil.
+
+                        ```CSS
+                        @media (min-width: 576px) {
+                            body {
+                                background-color: red;
+                            }
+                        }
+
+                        @media (min-width: 768px) {
+                            body {
+                                background-color: green;
+                            }
+                        }                        
+                        ```                        
+
+                        https://codepen.io/tony-maulaz/pen/rNQbRJo
+                        
+                        https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries
+                    </textarea>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="pdf.js"></script>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <script src="../plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+
+        Reveal.configure({ pdfMaxPagesPerSlide: 1 });
+    </script>    
+</body>
+
+</html>
