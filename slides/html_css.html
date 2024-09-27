@@ -442,24 +442,24 @@
                     <textarea data-template>
                         ## <i class="fas fa-paint-roller"></i> La combinaison des sélecteurs
 
-                        - Sélecteur descendant (les éléments p dans les éléments div)
+                        - Sélecteur descendant (tous les éléments p qui ont comme parent direct ou indirect un éléments div)
                         ```css
                         div p { color: red; }
                         ```
                         
-                        - Sélecteur enfant (tous les éléments p dans les éléments div)
+                        - Sélecteur enfant (tous les éléments p qui ont comme parent direct une div)
                         ```css
                         div > p { color: red; }
                         ```
 
-                        - Sélecteur adjacent (l'élément p qui suit un élément div)
+                        - Sélecteur adjacent (l'élément p qui suit un élément div (non imbriqué))
                         ```css
                         div + p { color: red; }
                         ```
 
                         - Sélecteur type et classe (les éléments p avec la classe "ma_class")
                         ```css
-                        p.ma_class { color: red; }
+                        p.ma_class { color: red; }			    
                         ```
 
                         https://developer.mozilla.org/fr/docs/Web/CSS/Adjacent_sibling_combinator
